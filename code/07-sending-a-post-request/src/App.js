@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
+import Header from './components/Header';
 import MoviesList from './components/MoviesList';
 import AddMovie from './components/AddMovie';
 import './App.css';
@@ -55,8 +56,7 @@ function App() {
 				},
 			}
 		);
-		const data = await response.json();
-		console.log(data);
+		await response.json();
 	}
 
 	let content = <p>Found no movies.</p>;
@@ -75,6 +75,7 @@ function App() {
 
 	return (
 		<React.Fragment>
+			<Header></Header>
 			<section>
 				<AddMovie onAddMovie={addMovieHandler} />
 			</section>
