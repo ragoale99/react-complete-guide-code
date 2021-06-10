@@ -33,6 +33,7 @@ const AddMovie = (props) => {
 		blurValueHandler: blurTitleHandler,
 		reset: resetTitle,
 	} = useInput(checkTitle);
+
 	const {
 		isTouched: dateIsTouched,
 		enteredValue: enteredDate,

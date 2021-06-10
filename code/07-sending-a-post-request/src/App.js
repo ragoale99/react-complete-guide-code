@@ -26,6 +26,7 @@ function App() {
 			const loadedMovies = [];
 
 			for (const key in data) {
+				console.log(key);
 				loadedMovies.push({
 					id: key,
 					title: data[key].title,
@@ -74,7 +75,7 @@ function App() {
 	}
 
 	return (
-		<React.Fragment>
+		<>
 			<Header></Header>
 			<section>
 				<AddMovie onAddMovie={addMovieHandler} />
@@ -83,7 +84,7 @@ function App() {
 				<button onClick={fetchMoviesHandler}>Fetch Movies</button>
 			</section>
 			<section>{content}</section>
-		</React.Fragment>
+		</>
 	);
 }
 
